@@ -1,18 +1,13 @@
 <script>
-  function redirectToMobileSite() {
-    // Überprüfen Sie, ob das Gerät ein iOS-Gerät ist
-    if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
-      // Weiterleitung zur iOS-Website
+  function redirectToAppleSite() {
+    // Überprüfen Sie, ob das Gerät ein iPhone ist
+    if (navigator.userAgent.match(/iPhone/i)) {
+      // Weiterleitung zur Apple-Website
       window.location = "https://www.apple.com";
-    }
-    // Überprüfen Sie, ob das Gerät ein Android-Gerät ist
-    else if (navigator.userAgent.match(/Android/i)) {
-      // Weiterleitung zur Android-Website
-      window.location = "https://www.android-website.com";
     }
   }
 </script>
 
-<body onload="redirectToMobileSite()">
+<body onload="redirectToAppleSite()">
   <!-- Rest Ihres HTML-Codes hier -->
 </body>
