@@ -1,13 +1,42 @@
-<script>
-  function redirectToAppleSite() {
-    // Überprüfen Sie, ob das Gerät ein iPhone ist
-    if (navigator.userAgent.match(/iPhone/i)) {
-      // Weiterleitung zur Apple-Website
-      window.location = "https://www.apple.com";
+<!DOCTYPE html>
+    <html>
+    <body>
+    <p>What is the name(s) of your browser?</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+    <script>
+    
+    function myFunction() { 
+     if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
+    {
+        alert('Opera');
     }
-  }
-</script>
-
-<body onload="redirectToAppleSite()">
-  <!-- Rest Ihres HTML-Codes hier -->
-</body>
+    else if(navigator.userAgent.indexOf("Edg") != -1 )
+    {
+        alert('Edge');
+    }
+    else if(navigator.userAgent.indexOf("Chrome") != -1 )
+    {
+        alert('Chrome');
+    }
+    else if(navigator.userAgent.indexOf("Safari") != -1)
+    {
+        alert('Safari');
+    }
+    else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
+    {
+         alert('Firefox');
+    }
+    else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
+    {
+      alert('IE'); 
+    }  
+    else 
+    {
+       alert('unknown');
+    }
+    }
+    </script>
+    
+    </body>
+    </html>
