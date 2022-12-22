@@ -1,42 +1,32 @@
-<!DOCTYPE html>
-    <html>
-    <body>
-    <p>What is the name(s) of your browser?</p>
-    <button onclick="myFunction()">Try it</button>
-    <p id="demo"></p>
-    <script>
-    
-    function myFunction() { 
-     if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
-    {
-        alert('Opera');
+<script>
+  function detectOperatingSystem() {
+    // Überprüfen Sie, ob das Betriebssystem Windows ist
+    if (navigator.userAgent.match(/Windows/i)) {
+      alert("Das Betriebssystem ist Windows.");
     }
-    else if(navigator.userAgent.indexOf("Edg") != -1 )
-    {
-        alert('Edge');
+    // Überprüfen Sie, ob das Betriebssystem macOS ist
+    else if (navigator.userAgent.match(/Macintosh/i)) {
+      alert("Das Betriebssystem ist macOS.");
     }
-    else if(navigator.userAgent.indexOf("Chrome") != -1 )
-    {
-        alert('Chrome');
+    // Überprüfen Sie, ob das Betriebssystem Linux ist
+    else if (navigator.userAgent.match(/Linux/i)) {
+      alert("Das Betriebssystem ist Linux.");
     }
-    else if(navigator.userAgent.indexOf("Safari") != -1)
-    {
-        alert('Safari');
+    // Überprüfen Sie, ob das Betriebssystem iOS ist
+    else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+      alert("Das Betriebssystem ist iOS.");
     }
-    else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
-    {
-         alert('Firefox');
+    // Überprüfen Sie, ob das Betriebssystem Android ist
+    else if (navigator.userAgent.match(/Android/i)) {
+      alert("Das Betriebssystem ist Android.");
     }
-    else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
-    {
-      alert('IE'); 
-    }  
-    else 
-    {
-       alert('unknown');
+    // Falls keines der obigen Betriebssysteme erkannt wurde, ist das Betriebssystem unbekannt
+    else {
+      alert("Das Betriebssystem ist unbekannt.");
     }
-    }
-    </script>
-    
-    </body>
-    </html>
+  }
+</script>
+
+<body onload="detectOperatingSystem()">
+  <!-- Rest Ihres HTML-Codes hier -->
+</body>
